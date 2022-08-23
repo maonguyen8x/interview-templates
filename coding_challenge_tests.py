@@ -15,8 +15,14 @@ class CodingChallengeTests(unittest.TestCase):
         self.assertIsInstance(say_hello(), str)
         # Returns True if the string is in uppercase
         # else returns False
-        self.assertTrue(say_hello(), 'HELLO'.isupper())
+        self.assertTrue(say_hello(), 'Hello'.isupper())
         self.assertTrue(say_hello(), 'Hello'.islower())
+        # Returns True if say_hello() is capitalize
+        self.assertTrue(say_hello().capitalize)
+        # Returns False if say_hello() is difference from 'Hello'
+        self.assertNotEqual(say_hello(), 'Hi')
+        self.assertNotEqual(say_hello(), False)
+        self.assertNotEqual(say_hello(), True)
 
 
 if __name__ == '__main__':
